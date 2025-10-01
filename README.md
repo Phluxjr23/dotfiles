@@ -2,9 +2,8 @@
 This is my dotfiles repo, containing but not limited to:
 * Kitty
 * Hypr
-* Waybar
+* Waybar 
 * Wofi
-dotfiles.
 
 ## Dependencies
 
@@ -37,11 +36,29 @@ Here are some common problems and how to fix them:
 
 ## Post install
 
-Keybinds are as follows:
+Keybinds are as follows, where Super is the windows key:
 * Super + T - Opens kitty
 * Super + W - Opens vivaldi
 * Super + C - Closes focused window
 * Super + Shift + M - Exit hyprland
 * Super + E - Opens dolphin file manager
+* Super + Any arrow key - Moves focus to that direction's closest window, from focused window (example, if you have 4 apps open and have the bottom-left focused, doing Super + up will select the top-right.)
+* Super + 1-0 - Switches workspace.
+* Super + Shift + 1-0 - Moves focused window to specified workspace.
+  
+If you need any help, don't hesitate to *make an issue with the* **HELP** tag.
 
-If you need any help, don't hesitate to *make an issue with the* _HELP_ tag.
+### Extras - Rices
+For those who don't know, a 'rice' in Linux (or anything really) is pretty much your cool looking Session (or as i call them, Really Insane Cool Environment).
+Anyway, here's some sick screenshots (yea i know my battery's low who cares):
+
+Default Rice
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a50a08cf-64ca-4d64-be8c-f9724669ed28" />
+
+Sprice
+<img width="1921" height="1081" alt="image" src="https://github.com/user-attachments/assets/64b047a1-b1b2-4b5d-aa5e-a9dfa3eba4dc" />
+
+Gaming
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4fd0f254-93f5-47f5-ba39-6445fb39b749" />
+
+
