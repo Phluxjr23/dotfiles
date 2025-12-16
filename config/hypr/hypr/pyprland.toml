@@ -1,0 +1,46 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "magnify",
+  "expose",
+  "shift_monitors"
+]
+
+# Dropdown terminal scratchpad
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class scratchpad"
+class = "scratchpad"
+size = "75% 60%"
+max_size = "1920px 100%"
+margin = 50
+
+# File manager scratchpad
+[scratchpads.files]
+animation = "fromRight"
+command = "thunar"
+class = "thunar"
+size = "40% 80%"
+unfocus = "hide"
+
+# Volume control scratchpad
+[scratchpads.volume]
+animation = "fromTop"
+command = "pavucontrol"
+class = "pavucontrol"
+size = "50% 50%"
+
+# Music player scratchpad
+[scratchpads.music]
+animation = "fromBottom"
+command = "spotify"
+class = "Spotify"
+size = "70% 70%"
+
+# Magnifier settings
+[magnify]
+factor = 2.0
+
+# Expose (show all windows)
+[expose]
+include_special = false

@@ -1,0 +1,17 @@
+[2025-12-16 01:41:55.748] [info] Using configuration file /home/will/.config/waybar/config.jsonc
+[2025-12-16 01:41:55.750] [info] Discovered appearance 'dark'
+[2025-12-16 01:41:55.766] [info] Using CSS file /home/will/.config/waybar/style.css
+[2025-12-16 01:41:55.771] [info] Hyprland IPC starting
+[2025-12-16 01:41:55.771] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-12-16 01:41:55.771] [warning] 'swap-icon-label' must be a bool.
+sh: line 1: swaync-client: command not found
+[2025-12-16 01:41:55.785] [error] notification stopped unexpectedly, is it endless?
+[2025-12-16 01:41:55.797] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-12-16 01:41:55.798] [warning] 'swap-icon-label' must be a bool.
+sh: line 1: swaync-client: command not found
+[2025-12-16 01:41:55.808] [error] notification stopped unexpectedly, is it endless?
+[2025-12-16 01:41:56.035] [info] Bar configured (width: 1600, height: 40) for output: eDP-1
+[2025-12-16 01:41:56.035] [error] Item '': No icon name or pixmap given.
+[2025-12-16 01:41:56.078] [info] Bar configured (width: 1920, height: 40) for output: HDMI-A-1
+[2025-12-16 01:41:56.078] [error] Item '': No icon name or pixmap given.
+[2025-12-16 01:41:56.119] [info] Bar configured (width: 1920, height: 40) for output: HDMI-A-1
