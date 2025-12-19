@@ -9,6 +9,7 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.termguicolors = true
+vim.opt.cursorline = true
 
 -- clipboard support (system clipboard)
 vim.opt.clipboard = "unnamedplus"
@@ -18,9 +19,12 @@ vim.keymap.set('n', '<Tab>', 'i', { noremap = true })
 vim.keymap.set('n', '<S-Tab>', 'I', { noremap = true })
 
 -- better copy/paste keybinds
-vim.keymap.set('v', '<C-c>', '"+y', { noremap = true })  -- ctrl+c to copy
-vim.keymap.set('n', '<C-v>', '"+p', { noremap = true })  -- ctrl+v to paste
-vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true })  -- ctrl+v in insert mode
+vim.keymap.set('v', '<C-c>', '"+y', { noremap = true })
+vim.keymap.set('n', '<C-v>', '"+p', { noremap = true })
+vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true })
+
+-- file tree toggle
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 -- plugin manager (lazy.nvim)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -44,7 +48,71 @@ require("lazy").setup({
     name = "catppuccin",
     priority = 1000,
     config = function()
+      require("catppuccin").setup({
+        flavour = "mocha",
+        transparent_background = true,
+        integrations = {
+          cmp = true,
+          nvimtree = true,
+          treesitter = true,
+          native_lsp = {
+            enabled = true,
+          },
+        },
+        custom_highlights = function(colors)
+          return {
+            CursorLine = { bg = colors.surface0 },
+          }
+        end,
+      })
       vim.cmd.colorscheme "catppuccin-mocha"
+    end,
+  },
+
+  -- statusline
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "catppuccin",
+          component_separators = { left = '', right = ''},
+          section_separators = { left = '', right = ''},
+        },
+      })
+    end,
+  },
+
+  -- file tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("nvim-tree").setup({
+        view = {
+          width = 30,
+          side = "left",
+        },
+        renderer = {
+          icons = {
+            glyphs = {
+              default = "",
+              symlink = "",
+              folder = {
+                arrow_closed = "",
+                arrow_open = "",
+                default = "",
+                open = "",
+                empty = "",
+                empty_open = "",
+                symlink = "",
+                symlink_open = "",
+              },
+            },
+          },
+        },
+      })
     end,
   },
 
